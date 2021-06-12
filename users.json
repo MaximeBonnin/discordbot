@@ -1,0 +1,106 @@
+{
+    "1": {
+        "ID": 1,
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 0,
+            "Basic Gacha": 0,
+            "Better Gacha": 0,
+            "Good Gacha": 0,
+            "Very rare Gacha": 0,
+            "The legendary Gacha": 0
+        }
+    },
+    "18": {
+        "ID": "18",
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 0,
+            "Basic Gacha": 1,
+            "Better Gacha": 0,
+            "Good Gacha": 0,
+            "Very rare Gacha": 0,
+            "The legendary Gacha": 0
+        }
+    },
+    "19": {
+        "ID": "19",
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 0,
+            "Basic Gacha": 0,
+            "Better Gacha": 0,
+            "Good Gacha": 0,
+            "Very rare Gacha": 0,
+            "The legendary Gacha": 0
+        }
+    },
+    "2": {
+        "ID": "2",
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 0,
+            "Basic Gacha": 0,
+            "Better Gacha": 0,
+            "Good Gacha": 0,
+            "Very rare Gacha": 0,
+            "The legendary Gacha": 0
+        }
+    },
+    "3": {
+        "ID": "3",
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 6,
+            "Basic Gacha": 3,
+            "Better Gacha": 0,
+            "Good Gacha": 0,
+            "Very rare Gacha": 0,
+            "The legendary Gacha": 0
+        }
+    },
+    "7": {
+        "ID": "7",
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 0,
+            "Basic Gacha": 0,
+            "Better Gacha": 0,
+            "Good Gacha": 1,
+            "Very rare Gacha": 0,
+            "The legendary Gacha": 0
+        }
+    },
+    "69": {
+        "ID": "69",
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 65,
+            "Basic Gacha": 25,
+            "Better Gacha": 6,
+            "Good Gacha": 3,
+            "Very rare Gacha": 1,
+            "The legendary Gacha": 0
+        }
+    },
+    "142770908489187329": {
+        "ID": "142770908489187329",
+        "Name": "",
+        "LastGacha": 0,
+        "GachaInv": {
+            "Nothing useful": 0,
+            "Basic Gacha": 0,
+            "Better Gacha": 0,
+            "Good Gacha": 0,
+            "Very rare Gacha": 0,
+            "The legendary Gacha": 100
+        }
+    }
+}
