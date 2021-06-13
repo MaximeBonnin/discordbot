@@ -1,16 +1,14 @@
-
 # discord bot app
 # https://realpython.com/how-to-make-a-discord-bot-python/#connecting-a-bot
-
 import os
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
 # import random
 from minigames import roll_dice, gacha_game, check_last_gacha, NPC_name, get_gacha_loot
-from item_finder import find_item
+# from item_finder import find_item
 import time
-import csv
+from item_finder import find_item_easy
 
 load_dotenv()
 Token = os.getenv('DISC_TOKEN')
@@ -24,17 +22,17 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='"Xime pls help"'))
 
 
-@bot.command(name="find", help="> Finds D&D info. Use: 'Xime pls find item:name-of-item'")
-async def bot_find(ctx, arg):
+@bot.command(name="find", help="> Finds D&D info. Use: Xime pls find item:name-of-item")
+async def bot_find(ctx, item_name):
     print("Looking up item")
-    found = find_item(user_input=arg)
+    # found = find_item(user_input=arg)
+    found = find_item_easy(item_name)
     if found:
-        output = ""
-        for i in found.items():
-            output = output + f"**{i[0]}:** {i[1]} \n"
-        await ctx.send(output)
+        for i in found:
+            await ctx.send(i)
     else:
-        await ctx.send("No item with that name found.")
+        await ctx.send("No item with that name found.\n**Use:** ``Xime pls find <item:name-of-item>``\n "
+                       "works best for spell:name, item:name, feat:name and <class>:subclass")
 
 @bot.command(name="do", help="> Does things? Maybe?")
 async def do(ctx, arg="nothing"):
@@ -42,15 +40,15 @@ async def do(ctx, arg="nothing"):
 
 
 @bot.command(name="name", help="> Thinks of a name for you!")
-async def do(ctx, race):
+async def name(ctx, race):
     if not NPC_name(race):
-        await ctx.send(f"{race} is not a valid entry, sorry.")
+        await ctx.send(f"{race} is not a valid entry, sorry. Use: ``Xime pls name <D&D race>``")
     else:
         new_name = NPC_name(race)
         await ctx.send(f"Your {race} is named {new_name}.")
 
 
-@bot.command(name="gacha", help="> Does things? Maybe?")
+@bot.command(name="gacha", help="> Let's you play a gacha game! Go get the rarest one!")
 async def gacha(ctx):
     userID = str(ctx.author.id)
     current = time.time()
